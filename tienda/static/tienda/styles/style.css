@@ -1,0 +1,31 @@
+body {
+    background-color: #984d38;
+    background-image: linear-gradient(90deg, #984d38 0%, #181e41 48%);
+}
+
+.color-span {
+    background: -webkit-linear-gradient(#edb7ff, #a831d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-color-button {
+    background-color: #7700b7;
+    background-image: linear-gradient(170deg, #edb7ff67 0%, #7700b7 100%);
+}
+
+#carouselExampleAutoplaying .carousel-item {
+    object-fit: cover;
+    object-position: top;
+    min-height: 25vw;
+}
+
+@media (max-width: 600px) {
+    #carouselExampleAutoplaying .carousel-caption {
+        height: 7rem;
+    }
+}
+
+.titulo-carrusel {
+    font-size: 4rem;
+}

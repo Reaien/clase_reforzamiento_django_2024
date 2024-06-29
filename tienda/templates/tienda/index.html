@@ -1,0 +1,31 @@
+{% extends 'tienda/base.html' %}
+{% block contenido %}
+
+
+    <!--cards productos-->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="fw-bold text-white">Colección</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for p in productos %}
+            <div class="col-sm-4 ">
+                <div class="card mb-3 bg-white bg-opacity-50">
+                    {% if p.portada %}
+                    <img src="{{p.portada.url}}" class="rounded my-3 mx-auto card-img-top w-75" alt="producto">
+                    {% endif %}
+                    <p class="fw-semibold ms-3 fs-5 text-white text-opacity-50">{{p.artista}}</p>
+                    <div class="card-body text-center d-flex justify-content-between">
+                        <h5 class="card-title text-white fw-bold text-opacity-75">{{p.album}}</h5>
+                        <p class="card-text fw-bold text-white text-opacity-75">${{p.precio}}</p>
+                    </div>
+                    <button type="button" class="btn bg-color-button mx-5 mb-2 fw-semibold fs-4 text-white">Comprar</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}
